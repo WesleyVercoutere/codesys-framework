@@ -1,20 +1,20 @@
 # codesys-framework
 Framework to use with plc's in Codesys or TwinCAT
 
-> Status: in opbouw. Dit document beschrijft de doelarchitectuur. Niet alles is al zo geïmplementeerd.
+> Status: work in progress. This document describes the target architecture. Not everything is implemented this way yet.
 
 ## Libraries
 
-| Library     | Inhoud |
-|-------------|--------|
-| **Utils**   | Algemene bouwstenen zonder framework-kennis: timestamp, timer, blink, ... |
-| **Core**    | Het framework: Mode, Module, Hardware, Component, Command, services en alle interfaces die het framework nodig heeft. |
-| **IO**      | Eenvoudige IO: DI, DO, AI, AO. |
-| **General** | Algemene modules en services: EmergencyStop, AirPressure, UserRequest, SignalLamp, ... |
-| **Motion**  | (gepland) Assen en drives. |
-| **Visu**    | Controllers en frames voor de visualisatie. |
+| Library     | Contents |
+|-------------|----------|
+| **Utils**   | Generic building blocks with no knowledge of the framework: timestamp, timer, blink, ... |
+| **Core**    | The framework itself: Mode, Module, Hardware, Component, Command, the services, and every interface the framework needs. |
+| **IO**      | Simple IO: DI, DO, AI, AO. |
+| **General** | General modules and services: EmergencyStop, AirPressure, UserRequest, SignalLamp, ... |
+| **Motion**  | (planned) Axes and drives. |
+| **Visu**    | Controllers and frames for the visualisation. |
 
-### Afhankelijkheden
+### Dependencies
 
 ```
 Application ──► Visu ──► General ──► Core ──► Utils
@@ -22,41 +22,41 @@ Application ──► Visu ──► General ──► Core ──► Utils
                          Motion ──► Core
 ```
 
-**Regel:** afhankelijkheden wijzen altijd naar Core, nooit weg van Core. Core kent General, IO of Motion niet.
+**Rule:** dependencies always point towards Core, never away from it. Core does not know General, IO or Motion.
 
-**Interfaces staan in de laagste library die het concept nodig heeft.** Heeft Core iets uit een hogere library nodig, dan definieert Core de interface en implementeert de hogere library ze (dependency inversion). Voorbeelden:
+**An interface lives in the lowest library that needs the concept.** If Core needs something from a higher library, Core defines the interface and the higher library implements it (dependency inversion). Examples:
 
-| Interface        | Gedefinieerd in | Geïmplementeerd in      | Gebruikt door            |
-|------------------|-----------------|-------------------------|--------------------------|
-| `I_SafetyModule` | Core            | General (EmergencyStop, lichtscherm, lidar, ...) | Core (`FB_SafetyService`) |
-| `I_ModeRequest`  | Core            | Core (`FB_ModeService`) | General (`FB_UserRequestModule`) |
-| `I_Module`       | Core            | elke module             | Core (`FB_Mode`, `FB_ModuleGroup`) |
+| Interface        | Defined in | Implemented in          | Used by                  |
+|------------------|------------|-------------------------|--------------------------|
+| `I_SafetyModule` | Core       | General (EmergencyStop, light curtain, lidar, ...) | Core (`FB_SafetyService`) |
+| `I_ModeRequest`  | Core       | Core (`FB_ModeService`) | General (`FB_UserRequestModule`) |
+| `I_Module`       | Core       | every module            | Core (`FB_Mode`, `FB_ModuleGroup`) |
 
-De **applicatie** is de enige plek die alle libraries kent. Daar gebeurt de bedrading: instanties aanmaken en via `FB_Init` aan elkaar doorgeven.
+The **application** is the only place that knows every library. That is where the wiring happens: creating the instances and passing them to each other through `FB_Init`.
 
 ## Services
 
-Er zijn twee services die ervoor kunnen zorgen dat modules stoppen. Ze **melden**, maar sturen zelf geen modules aan.
+Two services can cause modules to stop. They **report**, but they never command modules themselves.
 
-### EventService: gewone modules
+### EventService: regular modules
 
-- Elke module kan een event raisen (`RaiseEvent`) met een level: info, warning, alarm, ...
-- Een alarm leidt tot een **Stop** (gecontroleerd stoppen).
-- Alarmen worden gelatched tot de operator ze bevestigt. Zolang de oorzaak blijft (bv. te lage luchtdruk), raist de module het event opnieuw, zodat herstarten na een ack niet lukt.
-- Events dragen hun bron mee (`eSubMachine`, `iSubMachineId`), zodat een ouder kan filteren op zijn eigen subboom.
+- Any module can raise an event (`RaiseEvent`) with a level: info, warning, alarm, ...
+- An alarm leads to a **Stop** (controlled stop).
+- Alarms stay latched until the operator acknowledges them. As long as the cause remains (for example, low air pressure), the module raises the event again, so the machine cannot restart after an acknowledge.
+- Events carry their source (`eSubMachine`, `iSubMachineId`), so a parent can filter on its own subtree.
 
-### SafetyService: safety-modules
+### SafetyService: safety modules
 
-- Safety-modules (noodstop, lichtschermen, lidars, ...) implementeren `I_SafetyModule`.
-- De SafetyService aggregeert ze en geeft één toestand: `Ok`, `QuickStop` of `ResetRequired`.
-- Een NOK leidt tot een **QuickStop**.
-- De **latch** zit in de SafetyService: na een NOK blijft de toestand `ResetRequired`, ook als de oorzaak weg is, tot er een expliciete `Reset` komt. Die reset lukt alleen als alle safety-modules weer `Ok` zijn.
-- Een SafetyService wordt via `FB_Init` doorgegeven en is niet globaal. Zo kunnen er later meerdere zijn, bijvoorbeeld één per zone.
+- Safety modules (emergency stop, light curtains, lidars, ...) implement `I_SafetyModule`.
+- The SafetyService aggregates them into a single state: `Ok`, `QuickStop` or `ResetRequired`.
+- A NOK leads to a **QuickStop**.
+- The **latch** lives in the SafetyService: after a NOK, the state stays `ResetRequired`, even once the cause is gone, until an explicit `Reset`. That reset only succeeds when every safety module is `Ok` again.
+- A SafetyService is passed through `FB_Init`, not used as a global. That leaves room for several of them later, for example one per zone.
 
 ```iecst
 // Core
 INTERFACE I_SafetyModule
-    PROPERTY Ok    : BOOL      // live toestand
+    PROPERTY Ok    : BOOL      // live state
     PROPERTY Name  : STRING
     METHOD   Reset : BOOL
 
@@ -65,15 +65,15 @@ INTERFACE I_SafetyService
     METHOD   Reset : BOOL
 ```
 
-> Dit is de **functionele** reactie op safety: netjes stoppen, de state machine bijhouden en meldingen geven. De eigenlijke veiligheidsfunctie (STO, contactors) blijft in de safety-PLC of het safety relay.
+> This is the **functional** reaction to safety: stopping cleanly, keeping the state machine consistent, and reporting. The actual safety function (STO, contactors) stays in the safety PLC or safety relay.
 
-## Modeboom
+## Mode tree
 
-Modes en modules vormen een **boom**. De Mode is de wortel. Een module met kinderen gedraagt zich voor die kinderen zoals de Mode voor zijn modules.
+Modes and modules form a **tree**, with the Mode as the root. A module with children behaves towards those children the way the Mode behaves towards its modules.
 
 ```
-FB_AutoMode                     ← leest SafetySrv + EventSrv (hele machine)
- ├─ FB_FeedStation             ← leest SafetySrv zone "Feed" (lidar)
+FB_AutoMode                     ← reads SafetySrv + EventSrv (whole machine)
+ ├─ FB_FeedStation             ← reads SafetySrv zone "Feed" (lidar)
  │   ├─ FB_Conveyor
  │   └─ FB_Gripper
  └─ FB_PressStation
@@ -81,29 +81,29 @@ FB_AutoMode                     ← leest SafetySrv + EventSrv (hele machine)
      └─ FB_Clamp
 ```
 
-### Regels
+### Rules
 
-1. **Eén ouder.** Elke module heeft precies één ouder. Alleen die geeft commando's als `Execute`, `Enable` of `Home`.
-2. **Stop is dominant.** `Stop()` en `QuickStop()` gaan altijd naar beneden, nooit naar opzij. Een module in (Quick)Stop weigert andere commando's tot ze een `Reset` krijgt. Stoppen wint altijd.
-3. **Commando's gaan naar beneden, status gaat naar boven.** Een ouder meldt pas "gestopt" als al zijn kinderen `NOT Busy` zijn.
-4. **Services lezen binnen je eigen scope.** De wortel (Mode) reageert op alles. Een tussenliggende module leest een service alleen als ze iets lokaals moet afhandelen, zoals de safety van haar zone of alarmen uit haar subboom. Anders blijven de services in `FB_Init` op 0.
-5. **Modules stoppen elkaar niet via events.** Een module raist een event, en de ouder beslist wat er gebeurt.
-6. **Bladmodules kennen geen services.** Ze voeren `Stop()` of `QuickStop()` uit als hun ouder dat vraagt, en raisen hoogstens zelf een event. Zo blijven ze herbruikbaar.
+1. **One parent.** Every module has exactly one parent. Only that parent issues commands such as `Execute`, `Enable` or `Home`.
+2. **Stop is dominant.** `Stop()` and `QuickStop()` only travel down the tree, never sideways. A module in (Quick)Stop rejects other commands until it receives a `Reset`. Stopping always wins.
+3. **Commands go down, status goes up.** A parent only reports "stopped" once all of its children are `NOT Busy`.
+4. **Read services only within your own scope.** The root (Mode) reacts to everything. An intermediate module only reads a service when it has to handle something locally, such as the safety of its zone or alarms from its subtree. Otherwise the services stay 0 in `FB_Init`.
+5. **Modules do not stop each other through events.** A module raises an event, and its parent decides what happens.
+6. **Leaf modules do not know about services.** They execute `Stop()` or `QuickStop()` when their parent asks, and at most raise an event themselves. That keeps them reusable.
 
-### Reactie in de Mode
+### Reaction in the Mode
 
-| Trigger                    | Mode-state  | Actie op de kinderen | Daarna |
-|----------------------------|-------------|----------------------|--------|
-| SafetyService ≠ `Ok`       | `QuickStop` | `QuickStop()`        | als alle kinderen gestopt zijn: `Invalid`, wacht op ResetSafety |
-| Alarm via EventService     | `Stop`      | `Stop()`             | als alle kinderen gestopt zijn: `Standby` of `Invalid` |
-| StopRequest van gebruiker  | `Stop`      | `Stop()`             | `Standby` |
+| Trigger                    | Mode state  | Action on children | Then |
+|----------------------------|-------------|--------------------|------|
+| SafetyService ≠ `Ok`       | `QuickStop` | `QuickStop()`      | once all children have stopped: `Invalid`, wait for ResetSafety |
+| Alarm via EventService     | `Stop`      | `Stop()`           | once all children have stopped: `Standby` or `Invalid` |
+| StopRequest from user      | `Stop`      | `Stop()`           | `Standby` |
 
-- Een commando wordt **elke cyclus herhaald** zolang de state actief is, niet alleen bij het binnenkomen. Dat volgt de semantiek van `FB_Command`: blijven `Invoke`n is pollen.
-- De base-implementatie stopt alle kinderen **parallel**. Een concrete mode of module mag `ProcessStop` overriden als de volgorde belangrijk is (eerst de transportband, dan de robot).
+- A command is **repeated every cycle** while the state is active, not only on entering it. This follows the semantics of `FB_Command`: calling `Invoke` repeatedly means polling.
+- The base implementation stops all children **in parallel**. A concrete mode or module may override `ProcessStop` when the order matters (first the conveyor, then the robot).
 
 ### `FB_ModuleGroup`
 
-`FB_Mode` en `FB_Module` hebben elk hun eigen state machine. De stoplogica voor kinderen zit daarom in een hulp-FB in Core, die beide gebruiken (compositie, geen overerving):
+`FB_Mode` and `FB_Module` each have their own state machine. The logic for stopping children therefore lives in a helper FB in Core that both use (composition, not inheritance):
 
 ```iecst
 FUNCTION_BLOCK FB_ModuleGroup
@@ -111,42 +111,42 @@ VAR
     _aChildren : ARRAY[0..cMaxChildren] OF I_Module;
 END_VAR
 
-METHOD Stop      : BOOL   // Stop() op alle kinderen, TRUE = allemaal gestopt
+METHOD Stop      : BOOL   // Stop() on all children, TRUE = all stopped
 METHOD QuickStop : BOOL
 METHOD Reset     : BOOL
-PROPERTY Busy    : BOOL   // OR van alle kinderen
+PROPERTY Busy    : BOOL   // OR of all children
 ```
 
 ```iecst
-// in ProcessQuickStop van een Mode of module
+// in ProcessQuickStop of a Mode or module
 IF _fbChildren.QuickStop() THEN
-    _eState := ...;   // volgende state
+    _eState := ...;   // next state
 END_IF
 ```
 
 ## User requests
 
-Start, stop, reset, ... zijn **commando's naar Core**. Ze lopen niet via de EventService: events betekenen "dit is gebeurd", requests betekenen "doe dit" en hebben feedback nodig.
+Start, stop, reset, ... are **commands to Core**. They do not go through the EventService: an event means "this happened", a request means "do this" and needs feedback.
 
 ```
-Visu / drukknoppen / remote
+Visu / push buttons / remote
         │
         ▼
-FB_UserRequestModule (General) ──► I_ModeRequest (Core) ──► FB_ModeService ──► actieve FB_Mode
+FB_UserRequestModule (General) ──► I_ModeRequest (Core) ──► FB_ModeService ──► active FB_Mode
 ```
 
 ### Core: `I_ModeRequest`
 
-Core legt vast welke requests er bestaan. De Mode beslist via zijn state machine of een request in de huidige state toegelaten is.
+Core defines which requests exist. The Mode's state machine decides whether a request is allowed in the current state.
 
 ```iecst
 INTERFACE I_ModeRequest
-    METHOD StartRequest         : BOOL   // TRUE = geaccepteerd
+    METHOD StartRequest         : BOOL   // TRUE = accepted
     METHOD StopRequest          : BOOL
     METHOD QuickStopRequest     : BOOL
     METHOD ResetSequenceRequest : BOOL
     METHOD ResetSafetyRequest   : BOOL
-    METHOD SetRequest           : BOOL   // iRequest, pData, pSize: mode-specifiek
+    METHOD SetRequest           : BOOL   // iRequest, pData, pSize: mode-specific
 
 INTERFACE I_ModeService EXTENDS I_ModeRequest
     METHOD   RequestMode
@@ -154,22 +154,22 @@ INTERFACE I_ModeService EXTENDS I_ModeRequest
     PROPERTY ActiveState
 ```
 
-- Een geweigerde request wordt gelogd via de EventService.
-- `SetRequest` is een generiek kanaal. De concrete request-ID's worden gedefinieerd in de applicatie of bij de concrete Mode. Core routeert ze alleen naar de actieve mode.
+- A rejected request is logged through the EventService.
+- `SetRequest` is a generic channel. The concrete request IDs are defined in the application or in the concrete Mode. Core only routes them to the active mode.
 
 ### General: `FB_UserRequestModule`
 
-Hier zit alles over **waar** een request vandaan komt en **hoe** het binnenkomt:
+This is where everything about **where** a request comes from and **how** it arrives lives:
 
-- **Bronnen:** visu, hardware-drukknoppen, remote/OPC UA.
-- **Arbitrage:** local/remote, welke bron mag bedienen.
-- **Gebaren:** 2× stop binnen 500 ms wordt een QuickStop, stop lang ingedrukt wordt een ResetSequence.
-- **Logging** met `sSource`.
-- **Routering:** `ResetSafety` gaat naar de SafetyService en naar de Mode.
+- **Sources:** visu, hardware push buttons, remote/OPC UA.
+- **Arbitration:** local/remote, which source is allowed to operate the machine.
+- **Gestures:** pressing stop twice within 500 ms becomes a QuickStop, holding stop becomes a ResetSequence.
+- **Logging** with `sSource`.
+- **Routing:** `ResetSafety` goes to both the SafetyService and the Mode.
 
-De visu-controllers kennen alleen `I_UserRequestModule` en bevatten zelf geen logica.
+The visu controllers only know `I_UserRequestModule` and contain no logic of their own.
 
-## Bedrading in de applicatie
+## Wiring in the application
 
 ```iecst
 fbEventSrv      : FB_EventService(...);
@@ -185,12 +185,12 @@ fbModeSrv       : FB_ModeService(fbEventSrv := fbEventSrv, afbModes := [...]);
 fbUserRequest   : FB_UserRequestModule(fbModeRequest := fbModeSrv, fbSafetySrv := fbSafetySrv);
 ```
 
-### Volgorde in de taak
+### Order in the task
 
-1. Hardware / IO inlezen
+1. Read hardware / IO
 2. SafetyService
 3. ModeService / Mode
-4. Modules (van ouder naar kind)
-5. Hardware / IO schrijven
+4. Modules (parent before child)
+5. Write hardware / IO
 
-Een andere volgorde werkt ook, maar dan reageer je een cyclus later.
+Another order also works, but then the reaction comes one cycle later.
