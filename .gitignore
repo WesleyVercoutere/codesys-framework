@@ -1,0 +1,18 @@
+# Algemene regel om alle andere bestanden met extensie te negeren
+*.*
+*CreditInfo
+
+# Sta specifieke bestanden toe
+!.gitignore
+!*.compiled-library
+!*.library
+!*.project
+!*.png
+!*.tscfg
+!*.ebi
+
+# Sta specifieke directories toe
+!/docs/**
+!/plc/device-descriptions/**
+!/plc/libraries/**
+!/plc/drive-settings/**
