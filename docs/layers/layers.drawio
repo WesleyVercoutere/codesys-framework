@@ -45,6 +45,25 @@
         <mxCell id="s8a33NKgMPestNtsfLPC-5" edge="1" parent="1" source="9P05kYBy2wauD5tQEUoh-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="s8a33NKgMPestNtsfLPC-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="safety-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;horizontal=0;fillColor=#f8cecc;strokeColor=#b85450;" value="Safety" vertex="1">
+          <mxGeometry height="240" width="80" x="820" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="safety-edge-mode" edge="1" parent="1" source="9P05kYBy2wauD5tQEUoh-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="safety-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="40" />
+              <mxPoint x="860" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="safety-edge-module" edge="1" parent="1" source="9P05kYBy2wauD5tQEUoh-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="safety-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="380" />
+              <mxPoint x="860" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

@@ -34,6 +34,18 @@ Application ──► Visu ──► General ──► Core ──► Utils
 
 The **application** is the only place that knows every library. That is where the wiring happens: creating the instances and passing them to each other through `FB_Init`.
 
+## Layers
+
+![Layers](docs/layers/layers.svg)
+
+An arrow means "uses". Mode and Module both report to **Event** and **Safety**, the two cross-cutting services that can stop modules (see [Services](#services)). Safety is used by the Mode (whole machine), by safety modules that report their state, and by intermediate modules that handle the safety of their own zone.
+
+The source is [docs/layers/layers.drawio](docs/layers/layers.drawio). After editing it, re-export the SVG (the diagram is embedded, so the SVG can also be opened and edited in draw.io directly):
+
+```
+"C:\Program Files\draw.io\draw.io.exe" --export --format svg --embed-diagram --border 10 --output docs/layers/layers.svg docs/layers/layers.drawio
+```
+
 ## Services
 
 Two services can cause modules to stop. They **report**, but they never command modules themselves.
