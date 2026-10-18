@@ -52,10 +52,11 @@ Two services can cause modules to stop. They **report**, but they never command 
 
 ### EventService: regular modules
 
-- Any module can raise an event (`RaiseEvent`) with a level: info, warning, alarm, ...
+- Any module can raise an event with a level: info, warning, alarm, ...
 - An alarm leads to a **Stop** (controlled stop).
-- Alarms stay latched until the operator acknowledges them. As long as the cause remains (for example, low air pressure), the module raises the event again, so the machine cannot restart after an acknowledge.
-- Events carry their source (`eSubMachine`, `iSubMachineId`), so a parent can filter on its own subtree.
+- Alarms stay latched until they are reset. A reset only succeeds once the cause is gone (for example, low air pressure), so the machine cannot restart while the problem remains.
+- Events carry their source (`nSubMachine`, `nSubMachineId`), so a parent can filter on its own subtree.
+- How events are defined, registered and logged is described in [Events](#events).
 
 ### SafetyService: safety modules
 
@@ -78,6 +79,112 @@ INTERFACE I_SafetyService
 ```
 
 > This is the **functional** reaction to safety: stopping cleanly, keeping the state machine consistent, and reporting. The actual safety function (STO, contactors) stays in the safety PLC or safety relay.
+
+## Events
+
+Events are **not defined centrally**. Every module or component defines its own events in its own event group. Core only provides the mechanism. This keeps the dependency rule intact: Core never needs to know about an event from General, IO or the application.
+
+### Roles
+
+| Block | Owns | Responsible for | Knows |
+|---|---|---|---|
+| `FB_Event` | its config, payload and state | edge detection, active/latched, reset rules, logging itself | `I_EventLogger` only |
+| `FB_EventGroup` (one per module or component) | an array of `FB_Event` plus an enum | all event definitions of the module in one place, registering its events, a status for the group | `I_EventService` (only while registering) |
+| `FB_EventService` (Core) | a list of `I_Event` references | the central register, the summary state, global reset, handing out the logger | `I_Event`, `I_EventLogger` |
+| `FB_EventLogger` | a ring buffer | storing entries with a timestamp, writing them out asynchronously (Hyperion, file, visu) | nothing about events, only the data |
+
+```
+ FB_AirPressureModule ──uses──► I_EventGroup ──contains──► FB_Event[0..n]
+                                     │                         │
+                           RegisterEvents(srv)             Log(...)
+                                     ▼                         ▼
+                              I_EventService ───Bind───► I_EventLogger
+```
+
+### Interfaces
+
+```iecst
+I_Event         : Condition(x), Log(payload), Reset(), Bind(itfLogger),
+                  Active, Registered, Config, Disable
+I_EventGroup    : RegisterEvents(itfSrv), GetEvent(n) : I_Event, Count,
+                  Active / WarningIsOn / AlarmIsOn     // status over its own events
+I_EventService  : EXTENDS I_Service — Register(itfEvent), State : SC_EventState
+I_EventLogger   : Log(scEvent, scPayload, eTransition)  // Raised, Cleared, Reset, OneShot
+```
+
+### An event group
+
+Every module gets an enum and a group that derives from `FB_EventGroup`. All definitions of the module are in `Initialize`, one line per event.
+
+```iecst
+{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_AirPressureEvent :
+(
+    PressureNok := 0,
+    PressureLow,
+    SensorFault,
+    Count               // always last
+);
+END_TYPE
+
+FUNCTION_BLOCK FB_AirPressureEvents EXTENDS FB_EventGroup
+VAR
+    _afbEvents : ARRAY[0..E_AirPressureEvent.Count] OF FB_Event;
+END_VAR
+
+METHOD Initialize
+Configure(E_AirPressureEvent.PressureNok, cEv_MainPressureNotOk,   E_EventLevels.EventIsAlarm_SupervisorLevel, TRUE, 'Invalid air pressure');
+Configure(E_AirPressureEvent.PressureLow, cEv_MainPressureLow,     E_EventLevels.EventIsWarning_Urgent,        TRUE, 'Air pressure low: %0 bar');
+Configure(E_AirPressureEvent.SensorFault, cEv_PressureSensorFault, E_EventLevels.EventIsAlarm_OperatorLevel,   TRUE, 'Pressure sensor fault');
+```
+
+`Configure` lives in the base and fills in `nSubMachine` and `nSubMachineId` from the group, so every instance of a module can have its own source.
+
+### Flow
+
+1. **Declaration (`FB_Init`).** Only store references. Never call methods on other FBs here.
+2. **Initialize (first cycle).**
+   1. The module calls `_itfEvents.RegisterEvents(_itfEventSrv)`.
+   2. The group runs its `Initialize` (the `Configure` lines).
+   3. The group calls `itfEventSrv.Register(GetEvent(e))` for each of its events.
+   4. The service stores the reference and calls `itfEvent.Bind(_itfLogger)`. `Bind` sets `Registered := TRUE`, so the duplicate check costs nothing.
+3. **Every cycle.**
+   - The module calls `Condition(x)` for condition alarms. A rising edge makes the event active and logs `Raised`, a falling edge logs `Cleared`.
+   - The module calls `Log(payload)` for one-shots, such as a mode request. That writes one log entry and keeps no state.
+   - The event calls `_itfLogger.Log(...)`, which only adds an entry to the buffer.
+   - The service loops over its list and builds the summary state (`SC_EventState`, optionally per submachine). `FB_Mode` uses it to go to Stop or Invalid.
+   - The logger writes its buffer to the real destination.
+4. **Reset.** The service calls `Reset()` on every event. The event decides for itself: it only resets when `xResetable` is set and the condition is gone, and then logs `Reset`.
+
+### Wiring
+
+```iecst
+fbLogger            : FB_EventLogger;
+fbEventSrv          : FB_EventService(itfLogger := fbLogger);
+fbAirEvents         : FB_AirPressureEvents(nSubMachine := 1, nSubMachineId := 0);
+fbAirModule         : FB_AirPressureModule(itfEventSrv := fbEventSrv,
+                                           itfEvents   := fbAirEvents, ...);
+```
+
+```iecst
+// FB_AirPressureModule.Initialize
+_itfEvents.RegisterEvents(_itfEventSrv);
+
+// FB_AirPressureModule, every cycle
+_itfEvents.GetEvent(E_AirPressureEvent.PressureNok).Condition(NOT _itfHw.AirPressureOk);
+```
+
+Injecting the group lets the application replace it (other messages, levels or translations per machine) without changing the library. A module may also own a default group and only use the injected one when it is set (`IF itfEvents <> 0`).
+
+### Rules
+
+1. **An event does not know the service**, only the logger. A group only knows the service while registering.
+2. **Nothing happens in `FB_Init`** except storing references. Registering happens in `Initialize()`.
+3. **An unregistered event must not crash** (`_itfLogger <> 0`). It can be detected, to find events that were never registered.
+4. **The logger is a buffer**, not a direct write. Logging costs almost nothing in the module's cycle, and ten events in the same cycle are not lost. The logger keeps an overflow counter.
+5. **Event IDs are unique constants per library**, with their own range per library, for example `16#100..` for Core and `16#1000..` for General. Instances are told apart by `nSubMachine` and `nSubMachineId`, never by a different ID.
+6. **`cMaxEvents` must be generous.** When the list is full, the service logs it, so no event disappears silently.
 
 ## Mode tree
 
