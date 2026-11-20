@@ -1,0 +1,3 @@
+METHOD StopRequest : BOOL
+VAR_INPUT
+END_VAR

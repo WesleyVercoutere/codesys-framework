@@ -1,0 +1,1 @@
+INTERFACE I_ModeService EXTENDS I_ModeRequest

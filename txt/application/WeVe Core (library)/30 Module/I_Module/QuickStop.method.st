@@ -1,0 +1,3 @@
+METHOD QuickStop : BOOL
+VAR_INPUT
+END_VAR

@@ -1,0 +1,3 @@
+METHOD Build
+VAR_INPUT
+END_VAR

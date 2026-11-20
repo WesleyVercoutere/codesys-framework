@@ -1,0 +1,3 @@
+METHOD GetAverage : LREAL
+VAR_INPUT
+END_VAR

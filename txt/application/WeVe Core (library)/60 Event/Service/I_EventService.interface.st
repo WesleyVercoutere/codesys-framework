@@ -1,0 +1,1 @@
+INTERFACE I_EventService EXTENDS I_Service

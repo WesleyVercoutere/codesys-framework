@@ -1,0 +1,7 @@
+METHOD GetAddress : STRING
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+GetAddress := _sIp;

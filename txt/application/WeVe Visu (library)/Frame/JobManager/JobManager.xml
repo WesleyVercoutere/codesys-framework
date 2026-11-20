@@ -1,0 +1,1469 @@
+<ExportFile>
+  <StructuredView Guid="{d9b2b2cc-ea99-4c3b-aa42-1e5c49e65b84}">
+<Single xml:space="preserve" Type="{3daac5e4-660e-42e4-9cea-3711b98bfb63}" Method="IArchivable">
+  <Null Name="Profile" />
+  <List2 Name="EntryList">
+    <Single Type="{6198ad31-4b98-445c-927f-3258a0e82fe3}" Method="IArchivable">
+      <Single Name="IsRoot" Type="bool">True</Single>
+      <Single Name="MetaObject" Type="{81297157-7ec9-45ce-845e-84cab2b88ade}" Method="IArchivable">
+        <Single Name="Guid" Type="System.Guid">3b3f1845-590b-424e-8604-6436b5e3c6ea</Single>
+        <Single Name="ParentGuid" Type="System.Guid">652bc933-7caf-43ee-b43b-85bd72a08d9d</Single>
+        <Single Name="Name" Type="string">JobManager</Single>
+        <Dictionary Type="{2c41fa04-1834-41c1-816e-303c7aa2c05b}" Name="Properties">
+          <Entry>
+            <Key>
+              <Single Type="System.Guid">829a18f2-c514-4f6e-9634-1df173429203</Single>
+            </Key>
+            <Value>
+              <Single Type="{829a18f2-c514-4f6e-9634-1df173429203}" Method="IArchivable">
+                <Dictionary Type="{fa2ee218-a39b-4b6d-b249-49dbddbd168a}" Name="ParentObjects">
+                  <Entry>
+                    <Key>
+                      <Single Type="System.Guid">d9b2b2cc-ea99-4c3b-aa42-1e5c49e65b84</Single>
+                    </Key>
+                    <Value>
+                      <Single Type="System.Guid">c9836b49-21b0-4c1b-b369-1d4ffe89a204</Single>
+                    </Value>
+                  </Entry>
+                </Dictionary>
+              </Single>
+            </Value>
+          </Entry>
+        </Dictionary>
+        <Single Name="TypeGuid" Type="System.Guid">f18bec89-9fef-401d-9953-2f11739a6808</Single>
+        <Null Name="EmbeddedTypeGuids" />
+        <Single Name="Timestamp" Type="long">0</Single>
+      </Single>
+      <Single Name="Object" Type="{f18bec89-9fef-401d-9953-2f11739a6808}" Method="IArchivable">
+        <Null Name="LastVisuLanguageModelEntry" />
+        <Single Name="UniqueIdGenerator" Type="string">21</Single>
+        <Single Name="VisualElemList" Type="{f285c9a3-7019-446b-b98c-ccec3a0af8fa}" Method="IArchivable">
+          <List Name="VisualElementList" Type="{ef9d0b20-c96e-48db-b361-2ded4063150e}">
+            <Single Type="{f86c2928-8614-4cca-824b-e819ac4d58c4}" Method="IArchivable">
+              <Array Name="ConfiguredComplexInputs" Type="{1de566f6-72a7-494c-9353-9a418172c96e}" />
+              <List Name="Elements" Type="System.Collections.ArrayList" />
+              <Null Name="VisualElementDescription" />
+              <Single Name="VisualElemMemberList" Type="{17e26cd1-bb9b-47fe-a3d5-18fcd63b9c96}" Method="IArchivable">
+                <List Name="VisualElemMemberList" Type="{a4b83bea-3742-489c-9fe8-d96d68dba7ab}">
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1988609688</Single>
+                    <Single Name="Value" Type="string">BC2A4FA5-14BB-4918-8204-CD9A59198925</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2340015797</Single>
+                    <Single Name="Value" Type="string">HCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2565699834</Single>
+                    <Single Name="Value" Type="string">VCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4134387352</Single>
+                    <Single Name="Value" Type="string">NONE</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1603690730</Single>
+                    <Single Name="Value" Type="string">Arial</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4253639993</Single>
+                    <Single Name="Value" Type="short">12</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2729990903</Single>
+                    <Single Name="Value" Type="uint">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1213979116</Single>
+                    <Single Name="Value" Type="uint">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3488306084</Single>
+                    <Single Name="Value" Type="uint">4278190080</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1841004748</Single>
+                    <Single Name="Value" Type="string">HCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1527138651</Single>
+                    <Single Name="Value" Type="string">VCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1434968226</Single>
+                    <Single Name="Value" Type="string">NONE</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2570670854</Single>
+                    <Single Name="Value" Type="string">Arial</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2962390624</Single>
+                    <Single Name="Value" Type="short">12</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">197286807</Single>
+                    <Single Name="Value" Type="uint">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1520511911</Single>
+                    <Single Name="Value" Type="uint">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1720799940</Single>
+                    <Single Name="Value" Type="uint">4278190080</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2760174939</Single>
+                    <Single Name="Value" Type="string">&lt;toggle/tap variable&gt;</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">79858601</Single>
+                    <Single Name="Value" Type="string">HCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4170211607</Single>
+                    <Single Name="Value" Type="string">VCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3237426231</Single>
+                    <Single Name="Value" Type="string">NONE</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">432620569</Single>
+                    <Single Name="Value" Type="string">Arial</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4263212489</Single>
+                    <Single Name="Value" Type="short">12</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2253039221</Single>
+                    <Single Name="Value" Type="uint">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4125473248</Single>
+                    <Single Name="Value" Type="uint">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3944328998</Single>
+                    <Single Name="Value" Type="uint">4278190080</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">611646020</Single>
+                    <Single Name="Value" Type="string">&lt;toggle/tap variable&gt;</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3649724534</Single>
+                    <Single Name="Value" Type="short">30</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1970058906</Single>
+                    <Single Name="Value" Type="int">20</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">494569607</Single>
+                    <Single Name="Value" Type="uint">4278190080</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2812299069</Single>
+                    <Single Name="Value" Type="uint">4292137160</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">135947015</Single>
+                    <Single Name="Value" Type="uint">4278190080</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">493260384</Single>
+                    <Single Name="Value" Type="uint">4294967295</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1999528970</Single>
+                    <Single Name="Value" Type="string">&lt;toggle/tap variable&gt;</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3719097617</Single>
+                    <Single Name="Value" Type="int">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1649127785</Single>
+                    <Single Name="Value" Type="short">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">357335551</Single>
+                    <Single Name="Value" Type="short">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2422045748</Single>
+                    <Single Name="Value" Type="short">865</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2134141914</Single>
+                    <Single Name="Value" Type="short">330</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1668544811</Single>
+                    <Single Name="Value" Type="{503c5b2e-e80e-4ee7-ae00-c5b93a62b1aa}" Method="IArchivable">
+                      <Single Name="StructuredTypeNodeIsAnimation" Type="bool">False</Single>
+                      <List Name="TypeNodeChildren" Type="System.Collections.ArrayList">
+                        <Single Type="{6c16f79c-dd98-4c29-b3ba-7042e3055542}" Method="IArchivable">
+                          <Single Name="DynamicArrayNodeCounterNode" Type="{f7e1e748-ea0f-4fcb-b563-94837ee17e8d}" Method="IArchivable">
+                            <Single Name="Flags" Type="long">0</Single>
+                            <Single Name="BasicTypeNodeValue" Type="short">5</Single>
+                            <Single Name="BasicTypeNodeAcceptsExpression" Type="bool">False</Single>
+                            <Null Name="BasicTypeNodeFastAccess" />
+                            <Array Name="BasicTypeNodeEnumValues" Type="string" />
+                            <Null Name="EnumValueDisplayTextIds" />
+                            <Null Name="EnumValueVisibilityAttributeValues" />
+                            <Null Name="EnumValueLibraryId" />
+                            <Null Name="DynamicEnumMemberVisibilityCheckerTypeGuid" />
+                            <Null Name="EnumValueDisplayName" />
+                            <List Name="TypeNodeChildren" Type="System.Collections.ArrayList" />
+                            <Single Name="TypeNodeType" Type="{b12a9636-e818-4598-ae0d-fb6a2446102c}" Method="IArchivable">
+                              <Single Name="TypeClass" Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Int</Single>
+                              <Single Name="QualifiedName" Type="string">INT</Single>
+                              <Single Name="Name" Type="string">INT</Single>
+                            </Single>
+                            <Single Name="TypeNodeName" Type="string">iColumnCount</Single>
+                            <Single Name="TypeNodeAttributes" Type="{c1464dbe-c10d-4717-be8f-63efe8638434}" Method="IArchivable">
+                              <Single Name="AttrFlags" Type="ulong">1</Single>
+                              <Dictionary Type="{02a85e84-ef2d-46fc-93f2-acb0bbff3eda}" Name="TypeNodeAttributesData">
+                                <Entry>
+                                  <Key>
+                                    <Single Type="string">Visible</Single>
+                                  </Key>
+                                  <Value>
+                                    <Single Type="string">False</Single>
+                                  </Value>
+                                </Entry>
+                                <Entry>
+                                  <Key>
+                                    <Single Type="string">''NORMAL__COMMENT</Single>
+                                  </Key>
+                                  <Value>
+                                    <Single Type="string"> This variable holds the current number of columns in the variable "Column"</Single>
+                                  </Value>
+                                </Entry>
+                              </Dictionary>
+                              <Single Name="ConvDone" Type="bool">True</Single>
+                            </Single>
+                            <Single Name="TypeNodeId" Type="short">3</Single>
+                            <Single Name="TypeNodeIdLong" Type="long">1217457711</Single>
+                            <Single Name="LibraryId" Type="string">visuelemswincontrols, 4.8.1.0 (system)</Single>
+                            <Null Name="ElementId" />
+                            <Null Name="DisplayTextId" />
+                            <Null Name="DescriptionTextID" />
+                            <Single Name="DescriptionUseParent" Type="bool">False</Single>
+                          </Single>
+                          <Null Name="DynamicArrayNodeFastAccess" />
+                          <Null Name="ChildTemplate" />
+                          <List Name="TypeNodeChildren" Type="System.Collections.ArrayList" />
+                          <Single Name="TypeNodeType" Type="{b12a9636-e818-4598-ae0d-fb6a2446102c}" Method="IArchivable">
+                            <Single Name="TypeClass" Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Userdef</Single>
+                            <Single Name="QualifiedName" Type="string">VisuFbTableColumnSimple</Single>
+                            <Single Name="Name" Type="string">VisuFbTableColumnSimple</Single>
+                          </Single>
+                          <Single Name="TypeNodeName" Type="string">Column</Single>
+                          <Single Name="TypeNodeAttributes" Type="{c1464dbe-c10d-4717-be8f-63efe8638434}" Method="IArchivable">
+                            <Single Name="AttrFlags" Type="ulong">0</Single>
+                            <Dictionary Type="{02a85e84-ef2d-46fc-93f2-acb0bbff3eda}" Name="TypeNodeAttributesData">
+                              <Entry>
+                                <Key>
+                                  <Single Type="string">DisplayTextId</Single>
+                                </Key>
+                                <Value>
+                                  <Single Type="string">TL_ElementProperties.Column</Single>
+                                </Value>
+                              </Entry>
+                              <Entry>
+                                <Key>
+                                  <Single Type="string">DescriptionUseFromParent</Single>
+                                </Key>
+                                <Value>
+                                  <Single Type="string"></Single>
+                                </Value>
+                              </Entry>
+                              <Entry>
+                                <Key>
+                                  <Single Type="string">''NORMAL__COMMENT</Single>
+                                </Key>
+                                <Value>
+                                  <Single Type="string"> Points to an array, that containts the configuration of each column</Single>
+                                </Value>
+                              </Entry>
+                              <Entry>
+                                <Key>
+                                  <Single Type="string">DefaultArraySize</Single>
+                                </Key>
+                                <Value>
+                                  <Single Type="string">100</Single>
+                                </Value>
+                              </Entry>
+                            </Dictionary>
+                            <Single Name="ConvDone" Type="bool">True</Single>
+                          </Single>
+                          <Single Name="TypeNodeId" Type="short">2</Single>
+                          <Single Name="TypeNodeIdLong" Type="long">2702530833</Single>
+                          <Single Name="LibraryId" Type="string">visuelemswincontrols, 4.8.1.0 (system)</Single>
+                          <Null Name="ElementId" />
+                          <Single Name="DisplayTextId" Type="string">TL_ElementProperties.Column</Single>
+                          <Null Name="DescriptionTextID" />
+                          <Single Name="DescriptionUseParent" Type="bool">True</Single>
+                        </Single>
+                        <Single Type="{f7e1e748-ea0f-4fcb-b563-94837ee17e8d}" Method="IArchivable">
+                          <Single Name="Flags" Type="long">0</Single>
+                          <Single Name="BasicTypeNodeValue" Type="short">5</Single>
+                          <Single Name="BasicTypeNodeAcceptsExpression" Type="bool">False</Single>
+                          <Null Name="BasicTypeNodeFastAccess" />
+                          <Array Name="BasicTypeNodeEnumValues" Type="string" />
+                          <Null Name="EnumValueDisplayTextIds" />
+                          <Null Name="EnumValueVisibilityAttributeValues" />
+                          <Null Name="EnumValueLibraryId" />
+                          <Null Name="DynamicEnumMemberVisibilityCheckerTypeGuid" />
+                          <Null Name="EnumValueDisplayName" />
+                          <List Name="TypeNodeChildren" Type="System.Collections.ArrayList" />
+                          <Single Name="TypeNodeType" Type="{b12a9636-e818-4598-ae0d-fb6a2446102c}" Method="IArchivable">
+                            <Single Name="TypeClass" Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Int</Single>
+                            <Single Name="QualifiedName" Type="string">INT</Single>
+                            <Single Name="Name" Type="string">INT</Single>
+                          </Single>
+                          <Single Name="TypeNodeName" Type="string">iColumnCount</Single>
+                          <Single Name="TypeNodeAttributes" Type="{c1464dbe-c10d-4717-be8f-63efe8638434}" Method="IArchivable">
+                            <Single Name="AttrFlags" Type="ulong">1</Single>
+                            <Dictionary Type="{02a85e84-ef2d-46fc-93f2-acb0bbff3eda}" Name="TypeNodeAttributesData">
+                              <Entry>
+                                <Key>
+                                  <Single Type="string">Visible</Single>
+                                </Key>
+                                <Value>
+                                  <Single Type="string">False</Single>
+                                </Value>
+                              </Entry>
+                              <Entry>
+                                <Key>
+                                  <Single Type="string">''NORMAL__COMMENT</Single>
+                                </Key>
+                                <Value>
+                                  <Single Type="string"> This variable holds the current number of columns in the variable "Column"</Single>
+                                </Value>
+                              </Entry>
+                            </Dictionary>
+                            <Single Name="ConvDone" Type="bool">True</Single>
+                          </Single>
+                          <Single Name="TypeNodeId" Type="short">3</Single>
+                          <Single Name="TypeNodeIdLong" Type="long">1217457711</Single>
+                          <Single Name="LibraryId" Type="string">visuelemswincontrols, 4.8.1.0 (system)</Single>
+                          <Null Name="ElementId" />
+                          <Null Name="DisplayTextId" />
+                          <Null Name="DescriptionTextID" />
+                          <Single Name="DescriptionUseParent" Type="bool">False</Single>
+                        </Single>
+                      </List>
+                      <Single Name="TypeNodeType" Type="{b12a9636-e818-4598-ae0d-fb6a2446102c}" Method="IArchivable">
+                        <Single Name="TypeClass" Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Userdef</Single>
+                        <Single Name="QualifiedName" Type="string">VisuStructColumn</Single>
+                        <Single Name="Name" Type="string">VisuStructColumn</Single>
+                      </Single>
+                      <Single Name="TypeNodeName" Type="string">Columns</Single>
+                      <Single Name="TypeNodeAttributes" Type="{c1464dbe-c10d-4717-be8f-63efe8638434}" Method="IArchivable">
+                        <Single Name="AttrFlags" Type="ulong">344064</Single>
+                        <Dictionary Type="{02a85e84-ef2d-46fc-93f2-acb0bbff3eda}" Name="TypeNodeAttributesData">
+                          <Entry>
+                            <Key>
+                              <Single Type="string">SortFlag</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string">60</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">DisplayTextId</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string">TL_ElementProperties.Columns</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">''NORMAL__COMMENT</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string"> the node for this element in the property view should have no value, i.e. ''</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">Storable</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string">True</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">conditionalshow</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string">visu_coredev</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">Editable</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string">False</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">DescriptionTextId</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string">TL_ElementProperties.Desc_Columns</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">''DOCU__COMMENT</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string"> This structure contains the definition of the table columns.</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">Category</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string">Standard|Columns</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">TableColumns</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string"></Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">PreventBlobInitRec</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string">VisuStructRectangle</Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">DynamicArray</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string"></Single>
+                            </Value>
+                          </Entry>
+                          <Entry>
+                            <Key>
+                              <Single Type="string">DisplayValue</Single>
+                            </Key>
+                            <Value>
+                              <Single Type="string"></Single>
+                            </Value>
+                          </Entry>
+                        </Dictionary>
+                        <Single Name="ConvDone" Type="bool">True</Single>
+                      </Single>
+                      <Single Name="TypeNodeId" Type="short">1</Single>
+                      <Single Name="TypeNodeIdLong" Type="long">1668544811</Single>
+                      <Single Name="LibraryId" Type="string">visuelemswincontrols, 4.8.1.0 (system)</Single>
+                      <Null Name="ElementId" />
+                      <Single Name="DisplayTextId" Type="string">TL_ElementProperties.Columns</Single>
+                      <Single Name="DescriptionTextID" Type="string">TL_ElementProperties.Desc_Columns</Single>
+                      <Single Name="DescriptionUseParent" Type="bool">False</Single>
+                    </Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3866084034</Single>
+                    <Single Name="Value" Type="bool">True</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">538318008</Single>
+                    <Single Name="Value" Type="bool">True</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1055805281</Single>
+                    <Single Name="Value" Type="int">40</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1255297995</Single>
+                    <Single Name="Value" Type="int">1</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3729828405</Single>
+                    <List Name="Value" Type="System.Collections.ArrayList">
+                      <Single Type="{9e842eb2-1463-4af2-b605-4fbb17044f94}" Method="IArchivable">
+                        <Single Name="FontStyle" Type="int">0</Single>
+                        <Single Name="AdditionalFontStyle" Type="ushort">0</Single>
+                        <Single Name="ExplicitColor" Type="int">-16777216</Single>
+                        <Single Name="CanonicalName" Type="string">Font-Standard</Single>
+                        <Single Name="FontName" Type="string">Arial</Single>
+                        <Single Name="DisplayName" Type="string"></Single>
+                        <Single Name="FontSize" Type="int">12</Single>
+                        <Single Name="ScriptIdentification" Type="int">0</Single>
+                        <Single Name="DoubleFontSize" Type="double">0</Single>
+                        <Single Name="NamedColor" Type="{fa491db2-51ff-4bc1-9cd0-ce8c94ff6216}" Method="IArchivable">
+                          <Single Name="Color" Type="int">-16777216</Single>
+                          <Single Name="CanonicalName" Type="string">Font-Default-Color</Single>
+                        </Single>
+                      </Single>
+                    </List>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1176519758</Single>
+                    <List Name="Value" Type="System.Collections.ArrayList">
+                      <Single Type="{fa491db2-51ff-4bc1-9cd0-ce8c94ff6216}" Method="IArchivable">
+                        <Single Name="Color" Type="int">-16714753</Single>
+                        <Single Name="CanonicalName" Type="string">Element-Table-SelectionColor</Single>
+                      </Single>
+                    </List>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1905889384</Single>
+                    <List Name="Value" Type="System.Collections.ArrayList">
+                      <Single Type="{fa491db2-51ff-4bc1-9cd0-ce8c94ff6216}" Method="IArchivable">
+                        <Single Name="Color" Type="int">-16777216</Single>
+                        <Single Name="CanonicalName" Type="string">Element-Table-SelectionFontColor</Single>
+                      </Single>
+                    </List>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2678395525</Single>
+                    <Single Name="Value" Type="uint">1</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1228257629</Single>
+                    <Single Name="Value" Type="string"></Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">390574330</Single>
+                    <Single Name="Value" Type="string"></Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">571893170</Single>
+                    <Single Name="Value" Type="string"></Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1128707560</Single>
+                    <Single Name="Value" Type="string">cMaxNbrOfJobs</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">72808681</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4172187234</Single>
+                    <Single Name="Value" Type="string">1</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1636615684</Single>
+                    <Single Name="Value" Type="int">1</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1014161805</Single>
+                    <Single Name="Value" Type="string">GVL_Constant.cMaxNbrOfJobs - 1 + 1</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3701533217</Single>
+                    <Single Name="Value" Type="string">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1098849879</Single>
+                    <Single Name="Value" Type="string">5</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3234392039</Single>
+                    <Single Name="Value" Type="{8fac7628-4f9d-401d-8713-d78d623fa87e}" Method="IArchivable">
+                      <Single Name="DataArrayType" Type="string">ARRAY [1..cMaxNbrOfJobs] OF SC_VisuJobInfo</Single>
+                      <Single Name="ColumnCount" Type="int">5</Single>
+                      <Single Name="RowCount" Type="int">450</Single>
+                      <Single Name="FirstColumnIndex" Type="int">0</Single>
+                      <Single Name="FirstRowIndex" Type="int">1</Single>
+                      <Array Name="ColumnTypes" Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">
+                        <Single Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Userdef</Single>
+                        <Single Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Userdef</Single>
+                        <Single Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Userdef</Single>
+                        <Single Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Userdef</Single>
+                        <Single Type="{16f7aa24-038f-444e-9d81-b001bc091d35}">Userdef</Single>
+                      </Array>
+                      <Array Name="ColumnNames" Type="string">
+                        <Single Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobType</Single>
+                        <Single Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobState</Single>
+                        <Single Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobPriority</Single>
+                        <Single Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eFrame</Single>
+                        <Single Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eSide</Single>
+                      </Array>
+                      <Single Name="BaseType" Type="bool">False</Single>
+                      <Array Name="Bounds" Type="{ef0fabca-c7d4-4f23-8350-10fa7b208ac1}">
+                        <Single Type="{ef0fabca-c7d4-4f23-8350-10fa7b208ac1}" Method="IArchivable">
+                          <Single Name="IsVariableBound" Type="bool">True</Single>
+                          <Single Name="Identifier" Type="string">GVL_Constant.cMaxNbrOfJobs</Single>
+                          <Single Name="Value" Type="int">450</Single>
+                        </Single>
+                      </Array>
+                      <Single Name="ArrayType" Type="{ebaacb5d-5a32-412b-9087-31925070be93}">Invalid</Single>
+                    </Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2597686782</Single>
+                    <Single Name="Value" Type="bool">False</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1636817830</Single>
+                    <Single Name="Value" Type="string">%s</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1467829077</Single>
+                    <Single Name="Value" Type="string">%s</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">208337472</Single>
+                    <Single Name="Value" Type="string">%s</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">983067315</Single>
+                    <Single Name="Value" Type="string">%s</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3125123178</Single>
+                    <Single Name="Value" Type="string">%s</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3854506369</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobType</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1892666644</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobState</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">338671338</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobPriority</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2170511999</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eFrame</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3723444502</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eSide</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2232123230</Single>
+                    <Single Name="Value" Type="string">Job Type</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">511219082</Single>
+                    <Single Name="Value" Type="string">Job State</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1755163831</Single>
+                    <Single Name="Value" Type="string">Job Priority</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4092479075</Single>
+                    <Single Name="Value" Type="string">UserFrame</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2237128397</Single>
+                    <Single Name="Value" Type="string">Side</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2685023577</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobType</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3312258591</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobState</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1791247317</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eJobPriority</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">262371475</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eFrame</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4008173056</Single>
+                    <Single Name="Value" Type="string">PRG_VisuTask_10ms._fbJobMgrCtrl._ascJobs[INDEX].eSide</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4036189354</Single>
+                    <Single Name="Value" Type="short">150</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1010392116</Single>
+                    <Single Name="Value" Type="short">100</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2998295511</Single>
+                    <Single Name="Value" Type="short">150</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2115787593</Single>
+                    <Single Name="Value" Type="short">200</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1960399440</Single>
+                    <Single Name="Value" Type="short">200</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3669839856</Single>
+                    <Single Name="Value" Type="string">HCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1960173153</Single>
+                    <Single Name="Value" Type="string">HCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1562208915</Single>
+                    <Single Name="Value" Type="string">HCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4084595458</Single>
+                    <Single Name="Value" Type="string">HCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">244056951</Single>
+                    <Single Name="Value" Type="string">HCENTER</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2318311169</Single>
+                    <Single Name="Value" Type="int">450</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1268793537</Single>
+                    <Single Name="Value" Type="int">450</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3527550656</Single>
+                    <Single Name="Value" Type="int">450</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">332200192</Single>
+                    <Single Name="Value" Type="int">450</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">989326467</Single>
+                    <Single Name="Value" Type="int">450</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3146216842</Single>
+                    <Single Name="Value" Type="int">0</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">368043035</Single>
+                    <Single Name="Value" Type="int">1</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1009209577</Single>
+                    <Single Name="Value" Type="int">2</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2454700408</Single>
+                    <Single Name="Value" Type="int">3</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1874213133</Single>
+                    <Single Name="Value" Type="int">4</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1882453005</Single>
+                    <Single Name="Value" Type="bool">True</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2981964749</Single>
+                    <Single Name="Value" Type="bool">True</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">677334476</Single>
+                    <Single Name="Value" Type="bool">True</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3922825740</Single>
+                    <Single Name="Value" Type="bool">True</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3236595599</Single>
+                    <Single Name="Value" Type="bool">True</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">175837068</Single>
+                    <Single Name="Value" Type="bool">False</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">2541022970</Single>
+                    <Single Name="Value" Type="bool">False</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">3944074017</Single>
+                    <Single Name="Value" Type="bool">False</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">1981426263</Single>
+                    <Single Name="Value" Type="bool">False</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">332890263</Single>
+                    <Single Name="Value" Type="bool">False</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">4151883806</Single>
+                    <Single Name="Value" Type="string">707</Single>
+                  </Single>
+                  <Single Type="{c694e3a2-5c0b-4177-ab35-cb06bd5a6a02}" Method="IArchivable">
+                    <Single Name="Id" Type="long">176242795</Single>
+                    <Single Name="Value" Type="string">708</Single>
+                  </Single>
+                </List>
+              </Single>
+              <Single Name="VisualElementName" Type="string">Table</Single>
+              <Single Name="VisualElementTypeName" Type="string">VisuFbElemTable</Single>
+              <Single Name="VisualElementIsRectangle" Type="bool">True</Single>
+              <Single Name="VisualElementIdentifier" Type="string">GenElemInst_45</Single>
+              <Null Name="VisualElementOfflinePaintCommands" />
+              <Null Name="VisualElementFrameInformation" />
+              <Dictionary Type="System.Collections.Hashtable" Name="VisualElementInputActions" />
+              <Single Name="VisualElementIdentification" Type="System.Guid">204f183b-e956-411b-acc3-16896ff58be8</Single>
+              <Single Name="VisualElementOwningObjectGuid" Type="System.Guid">3b3f1845-590b-424e-8604-6436b5e3c6ea</Single>
+              <Array Name="LMGuids" Type="System.Guid">
+                <Single Type="System.Guid">bd229eb8-3b0e-4100-bbb5-036a3261843e</Single>
+                <Single Type="System.Guid">4b4b0c34-f02d-4584-a518-ddbf92690661</Single>
+              </Array>
+              <Dictionary Type="System.Collections.Hashtable" Name="SubElements" />
+              <Single Name="VisualElementId" Type="int">48</Single>
+              <List Name="UserManagementAccessRights" Type="System.Collections.ArrayList" />
+              <Single Name="AnimationDuration" Type="string">0</Single>
+              <Single Name="BringToForeground" Type="string"></Single>
+              <Single Name="ElementVersion" Type="byte">1</Single>
+              <Null Name="TabOrder" />
+            </Single>
+          </List>
+          <Single Name="BackgroundBitmapId" Type="string"></Single>
+          <Single Name="BackgroundColor" Type="int">16777215</Single>
+          <Single Name="Background" Type="{1038f12c-dd4b-4f96-87a3-a350fe8f3552}" Method="IArchivable">
+            <Null Name="BgGradient" />
+            <Null Name="BgNamedColor" />
+            <Single Name="BgBmpId" Type="string"></Single>
+            <Single Name="BgUseBmp" Type="bool">False</Single>
+            <Single Name="BgColor" Type="bool">False</Single>
+            <Single Name="BgUseColor" Type="int">16777215</Single>
+            <Single Name="BgUseGradient" Type="bool">False</Single>
+          </Single>
+          <Single Name="AllElementsHaveDynamicVisibility" Type="bool">False</Single>
+        </Single>
+        <Single Name="GeneratedLMMDescriptions" Type="{703465dc-4679-4ff2-bcc3-c57d0a204da3}" Method="IArchivable">
+          <Single Name="GeneratedVisuFbDescription" Type="{40d6dd8d-dfd0-493a-8e29-c9a35e1e6539}" Method="IArchivable">
+            <Dictionary Type="{7df88604-7ac5-4e36-91c4-55e4fdad3e68}" Name="FbMethods">
+              <Entry>
+                <Key>
+                  <Single Type="string">HasVisibilityAccess</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">a676a6d8-3dbb-4462-a903-80d0ad517eef</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ContainsPoint</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">8a45691d-4132-4e29-8f89-43cdf5e701da</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">AreAllElementsHidden</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">48da7aa0-9290-52a8-8119-dff92ed72525</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">SetStaticState</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">8a5d480b-c939-4f2c-94cc-a93b8c7be3a5</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">Update</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">f9ed7036-c512-411f-9f2a-7bdcfe79843e</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetTooltip</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">b6730343-5e9b-4361-93f7-497482b619b4</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetDialogInterfaceSize</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">8a944728-8f54-4d41-82b4-9f2d19c565c6</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetUpdateRects</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">ff035ba7-c3e4-4daf-ba3e-85dd6b7e708a</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetNamespace</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">adf20cab-cd8e-48e2-b818-d9b514926273</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetCallerNamespace</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">5390c693-ad15-5eb1-b269-0e967c798dd3</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetTranslator</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">54abedce-5c2f-4fc2-b330-640731d57461</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">SetClientData</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">e2adf5fc-1528-44a7-98e9-8e4795ca40c0</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetInstance</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">a8661a84-385c-4af7-8a27-49e36a0ac4bd</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetClientData</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">fec30d29-2ebc-44a4-bcbb-e1c164aba56a</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">Destruct</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">9549b011-2b39-485d-96b1-9ec1abab6fe2</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">Paint</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">29e86852-eb7d-49b6-aa9d-07037b00c01d</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetElementArray</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">1eb5369a-333b-43ff-9268-c4bcff95d0fb</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">SetVisuFlagsInternal</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">822735e9-d560-47f8-9aea-8e1b677ef05d</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetText</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">75f753df-245a-43ab-b8ec-810cddc819ea</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetTextProperties</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">c660eb74-2576-495e-b8f8-230f429db88b</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">IsAntialiasingInactive</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">14528f76-8ec1-4c86-a76e-7c529278836d</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">HasInputAccessIntern</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">60e46974-8879-5ad9-ab55-92d810d87ede</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">Initialize</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">53b9d43b-9b4e-443e-b467-937868e03b8a</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">HasInputAccess</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">9acb2a29-6393-4244-870c-d9596f22ca2a</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">HasVisibilityAccessIntern</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">32a7880d-7ae1-554b-bde3-a1bffdc07967</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetSurroundingRect</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">14824a1c-4a62-41d2-b1fd-0ba1ae1418fe</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetResult</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">760f67c9-a8f2-419e-8ef0-5d972391c300</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetLocalUsergroup</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">6c705e19-9329-4084-98cf-ebd0efed1b2d</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetName</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">c2f4337c-2270-42a2-8ccd-f0edb7d869e8</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetElementName</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">a9870fc7-f214-546c-96da-50d9685cfc8c</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetSize</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">cdebc31d-f414-4fe0-b8fa-b37005ec9f4f</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">SetDialogInterface</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">8635aae4-a243-422a-a294-9521826c5d19</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">FB_Reinit</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">71800372-572c-4b09-8c94-c7a10545ca21</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">FB_Exit</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">3d17031e-6637-4c01-94c5-f706efa1412f</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetInitializeVersion</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">42a2e8d6-4584-41d4-b855-d2af178a4124</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetDialogInterface</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">a170c1a6-6149-4cf1-ab10-d56f16e3714a</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetElementIdArray</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">b03fb56d-62f8-4bfa-84b7-a6196ce1644b</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">SetContainerSize</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">ff3ac867-a36b-52e6-84cc-2bd1bc99ad8a</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">HandleInput</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">e2cd5cd8-e1f0-41df-bf58-ec643c2b30a9</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">SetResult</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">8279b34e-4c6c-4254-97e5-d46f5a51bab0</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ElementInfo</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">19b25836-d173-45c2-88ac-aa2575dbc3e1</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetTabOrderIdArray</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">d06b42e2-24dd-5526-9214-0517f7de35fa</Single>
+                </Value>
+              </Entry>
+            </Dictionary>
+            <Dictionary Type="{7df88604-7ac5-4e36-91c4-55e4fdad3e68}" Name="FbProperties">
+              <Entry>
+                <Key>
+                  <Single Type="string">__getVisu</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">dcf74af1-7637-56ee-8db1-0bd695d4a726</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">__getContainer</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">f9fd487c-22d4-5bfb-8ed0-7e85fc2c40b9</Single>
+                </Value>
+              </Entry>
+            </Dictionary>
+            <Single Name="FbName" Type="string">NotImportant</Single>
+            <Single Name="FbGuid" Type="System.Guid">3b3f1845-590b-424e-8604-6436b5e3c6ea</Single>
+          </Single>
+          <Single Name="GeneratedGlobalVisuVarsGuid" Type="System.Guid">592f990c-1eb7-4168-b13b-562fab46f0df</Single>
+          <Single Name="GeneratedGlobalTheVisuVarlistGuid" Type="System.Guid">edad5ec7-e440-44af-abe8-61d63fecba87</Single>
+          <Single Name="GeneratedGlobalVisuConstants" Type="System.Guid">9925b494-1556-4446-8ab7-09634210aacc</Single>
+          <Dictionary Type="System.Collections.Hashtable" Name="GeneratedAllElementsEntries" />
+          <Single Name="VisuRegDesc" Type="{40d6dd8d-dfd0-493a-8e29-c9a35e1e6539}" Method="IArchivable">
+            <Dictionary Type="{7df88604-7ac5-4e36-91c4-55e4fdad3e68}" Name="FbMethods">
+              <Entry>
+                <Key>
+                  <Single Type="string">FB_Init</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">02cfd574-2e94-4d09-8b60-027ef6cd2b91</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">FB_Exit</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">ff0779ca-98eb-4c85-a563-9d27433dcc46</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">FB_Reinit</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">26b33b35-86f3-4cf7-ac6a-589ed0bb0a3a</Single>
+                </Value>
+              </Entry>
+            </Dictionary>
+            <Dictionary Type="{7df88604-7ac5-4e36-91c4-55e4fdad3e68}" Name="FbProperties" />
+            <Single Name="FbName" Type="string">NotImportant</Single>
+            <Single Name="FbGuid" Type="System.Guid">f389796a-ffd5-4de7-9b99-5dd0402d1813</Single>
+          </Single>
+          <Single Name="VisuRegisterGvl" Type="System.Guid">d0c5efc2-fe2c-4556-a56f-aca29745c426</Single>
+          <Null Name="SettingsPou" />
+          <Null Name="MemManPou" />
+          <Single Name="InputsPou" Type="{40d6dd8d-dfd0-493a-8e29-c9a35e1e6539}" Method="IArchivable">
+            <Dictionary Type="{7df88604-7ac5-4e36-91c4-55e4fdad3e68}" Name="FbMethods">
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteLooseCapture</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">c1a9c36f-e585-46bc-a745-b1c2226e5648</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteMouseEnter</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">3a5672c3-c5f0-418a-ad30-cefd2b01ddd0</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteMouseDblClick</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">6cecb0a8-2120-4b2e-99c3-706af93ae9e7</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteMouseDown</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">3ddfb75d-da9a-480f-aac9-0e800b56539b</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteMouseUp</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">bfb810b3-ebb5-445b-9dc1-0f460a3e072f</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">GetElementInfo</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">3528fdaf-fb06-4803-8a45-f3904b9cec81</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">abstrGetDefaultCursor</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">667588ab-dc7d-489d-a25f-b92295bea3ad</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteDialogClosed</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">d23df10a-f2b0-4eeb-aadc-5481a13fff1b</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteKeyUp</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">821420b0-9f82-4dc4-8dd1-57b3caa410d5</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteValueChanged</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">6bd11c63-b466-44d5-a9c2-7e506780a99f</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteMouseMove</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">0ec59a52-17c5-4b29-af23-407be019073e</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">Initialize</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">11b73f28-6ed4-4778-a749-de49c01d1873</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteMouseLeave</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">b196a90e-6abb-4139-b1c1-d5d63048f75f</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteKeyDown</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">49956f34-2f99-4271-8cdf-af630798e533</Single>
+                </Value>
+              </Entry>
+              <Entry>
+                <Key>
+                  <Single Type="string">ExecuteMouseClick</Single>
+                </Key>
+                <Value>
+                  <Single Type="System.Guid">64bd90f3-d2aa-4456-97d7-4217864930e2</Single>
+                </Value>
+              </Entry>
+            </Dictionary>
+            <Dictionary Type="{7df88604-7ac5-4e36-91c4-55e4fdad3e68}" Name="FbProperties" />
+            <Single Name="FbName" Type="string">NotImportant</Single>
+            <Single Name="FbGuid" Type="System.Guid">f11b7ff4-2305-4da8-a89e-439086372156</Single>
+          </Single>
+          <Single Name="DialogDut" Type="System.Guid">b4692e39-bbe6-4969-b47f-5129169de32a</Single>
+        </Single>
+        <Single Name="LastUsedIdForIdentifier" Type="int">45</Single>
+        <Single Name="TextDocument" Type="{f3878285-8e4f-490b-bb1b-9acbb7eb04db}" Method="IArchivable">
+          <Single Name="TextBlobForSerialisation" Type="string">VAR_IN_OUT
+	
+END_VAR</Single>
+          <Null Name="LineInfoPersistence" />
+        </Single>
+        <Single Name="GvlCreated" Type="bool">False</Single>
+        <Null Name="LMEntry" />
+        <Single Name="ProfileCompatibilityId" Type="long">4140216668</Single>
+        <Single Name="LMVerMinor" Type="int">0</Single>
+        <Single Name="LMVerMajor" Type="int">1</Single>
+        <Single Name="Hotkeys" Type="{6b108d46-58af-4e41-a3f4-174d8f160cc4}" Method="IArchivable">
+          <Single Name="IdMin" Type="long">481037385728</Single>
+          <Single Name="IdMax" Type="long">549755813887</Single>
+          <Single Name="Id" Type="long">481037385728</Single>
+          <Single Name="IdMask" Type="long">549754765312</Single>
+          <Single Name="IdStep" Type="long">1048576</Single>
+          <List2 Name="Inputs" />
+        </Single>
+        <Single Name="VisuSizeManager" Type="{5f612b0e-b404-455f-8177-27864e9f5332}" Method="IArchivable">
+          <Dictionary2 Name="Size">
+            <Entry>
+              <Key>
+                <Single Type="int">0</Single>
+              </Key>
+              <Value>
+                <Single Type="{6ad3e88f-aee2-4766-a7ea-a8790037ef51}" Method="IArchivable">
+                  <Single Name="Width" Type="int">865</Single>
+                  <Single Name="Height" Type="int">330</Single>
+                </Single>
+              </Value>
+            </Entry>
+            <Entry>
+              <Key>
+                <Single Type="int">1</Single>
+              </Key>
+              <Value>
+                <Single Type="{6ad3e88f-aee2-4766-a7ea-a8790037ef51}" Method="IArchivable">
+                  <Single Name="Width" Type="int">866</Single>
+                  <Single Name="Height" Type="int">331</Single>
+                </Single>
+              </Value>
+            </Entry>
+            <Entry>
+              <Key>
+                <Single Type="int">2</Single>
+              </Key>
+              <Value>
+                <Single Type="{6ad3e88f-aee2-4766-a7ea-a8790037ef51}" Method="IArchivable">
+                  <Single Name="Width" Type="int">866</Single>
+                  <Single Name="Height" Type="int">331</Single>
+                </Single>
+              </Value>
+            </Entry>
+          </Dictionary2>
+          <Single Name="Version" Type="int">2</Single>
+        </Single>
+        <Null Name="FrameInterfaceDataModel" />
+      </Single>
+      <Single Name="ParentSVNodeGuid" Type="System.Guid">c9836b49-21b0-4c1b-b369-1d4ffe89a204</Single>
+      <Array Name="Path" Type="string">
+        <Single Type="string">Device</Single>
+        <Single Type="string">PLC Logic</Single>
+        <Single Type="string">Application</Single>
+        <Single Type="string">WeVe Visu (library)</Single>
+        <Single Type="string">Frame</Single>
+        <Single Type="string">JobManager</Single>
+      </Array>
+      <Single Name="Index" Type="int">-1</Single>
+    </Single>
+  </List2>
+  <Null Name="ProfileName" />
+</Single>  </StructuredView>
+</ExportFile>

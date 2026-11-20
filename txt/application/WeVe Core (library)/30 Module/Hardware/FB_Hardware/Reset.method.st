@@ -1,0 +1,4 @@
+METHOD Reset : BOOL
+
+// --- BEGIN IMPLEMENTATION ---
+

@@ -1,0 +1,3 @@
+METHOD ResetSafety : BOOL
+VAR_INPUT
+END_VAR

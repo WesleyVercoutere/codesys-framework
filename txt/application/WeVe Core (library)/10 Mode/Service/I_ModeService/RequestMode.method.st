@@ -1,0 +1,4 @@
+METHOD RequestMode
+VAR_INPUT
+	nMode 	: USINT;
+END_VAR

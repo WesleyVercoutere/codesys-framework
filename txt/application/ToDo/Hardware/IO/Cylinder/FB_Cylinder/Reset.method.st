@@ -1,0 +1,9 @@
+METHOD Reset : BOOL
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+SUPER^.Reset();
+
+Reset := TRUE;

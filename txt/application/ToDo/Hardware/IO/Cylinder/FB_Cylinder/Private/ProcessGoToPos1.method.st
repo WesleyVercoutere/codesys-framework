@@ -1,0 +1,7 @@
+METHOD PRIVATE ProcessGoToPos1 : BOOL
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+xDQ_Value := TRUE;

@@ -1,0 +1,7 @@
+METHOD Start
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+_xOn := TRUE;

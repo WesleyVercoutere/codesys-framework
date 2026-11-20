@@ -1,0 +1,1 @@
+INTERFACE I_Mode EXTENDS I_ModeRequest

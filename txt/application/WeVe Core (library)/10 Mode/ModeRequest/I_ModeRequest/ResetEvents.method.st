@@ -1,0 +1,3 @@
+METHOD ResetEvents : BOOL
+VAR_INPUT
+END_VAR

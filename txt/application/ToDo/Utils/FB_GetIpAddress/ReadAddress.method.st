@@ -1,0 +1,7 @@
+METHOD ReadAddress
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+_xRead := TRUE;

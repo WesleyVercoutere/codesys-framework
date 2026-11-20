@@ -1,0 +1,3 @@
+METHOD StartRequest : BOOL
+VAR_INPUT
+END_VAR

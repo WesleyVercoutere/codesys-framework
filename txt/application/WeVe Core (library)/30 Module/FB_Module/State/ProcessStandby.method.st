@@ -1,0 +1,8 @@
+METHOD PROTECTED ProcessStandby
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+_xDone := FALSE;
+_xBusy := FALSE;

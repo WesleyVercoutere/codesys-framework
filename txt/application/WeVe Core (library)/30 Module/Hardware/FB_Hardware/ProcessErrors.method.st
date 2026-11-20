@@ -1,0 +1,7 @@
+METHOD PROTECTED ProcessErrors
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+;

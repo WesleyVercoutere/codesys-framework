@@ -1,0 +1,4 @@
+METHOD SetJob : BOOL
+VAR_INPUT
+	id 		: UINT;
+END_VAR

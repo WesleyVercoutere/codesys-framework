@@ -1,0 +1,3 @@
+METHOD Enable : BOOL
+VAR_INPUT
+END_VAR

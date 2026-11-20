@@ -1,0 +1,4 @@
+METHOD AddValue
+VAR_INPUT
+	lrValue 	: LREAL;
+END_VAR

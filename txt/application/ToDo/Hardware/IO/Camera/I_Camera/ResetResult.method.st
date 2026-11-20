@@ -1,0 +1,3 @@
+METHOD ResetResult
+VAR_INPUT
+END_VAR

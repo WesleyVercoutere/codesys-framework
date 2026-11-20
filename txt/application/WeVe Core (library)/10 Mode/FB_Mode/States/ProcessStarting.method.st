@@ -1,0 +1,7 @@
+METHOD PROTECTED ProcessStarting
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+

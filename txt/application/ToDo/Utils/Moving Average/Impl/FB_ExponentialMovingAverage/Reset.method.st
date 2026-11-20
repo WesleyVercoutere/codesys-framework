@@ -1,0 +1,10 @@
+METHOD Reset
+VAR_INPUT
+END_VAR
+VAR
+	i 	: UINT;
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+_lrEma := 0;

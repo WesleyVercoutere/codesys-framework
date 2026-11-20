@@ -1,0 +1,7 @@
+METHOD GetTime : TIME
+VAR_INPUT
+END_VAR
+
+// --- BEGIN IMPLEMENTATION ---
+
+GetTime := _tTotal;

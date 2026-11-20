@@ -1,0 +1,3 @@
+METHOD Disconnect : BOOL
+VAR_INPUT
+END_VAR

@@ -10,9 +10,11 @@
 !*.png
 !*.tscfg
 !*.ebi
+!*.md
 
 # Sta specifieke directories toe
 !/docs/**
 !/plc/device-descriptions/**
 !/plc/libraries/**
 !/plc/drive-settings/**
+!/txt/**

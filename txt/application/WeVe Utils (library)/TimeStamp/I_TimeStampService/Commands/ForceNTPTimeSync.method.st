@@ -1,0 +1,3 @@
+METHOD ForceNTPTimeSync : E_TaskStatus
+VAR_INPUT
+END_VAR
